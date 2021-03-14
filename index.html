@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-index">
+      <div class="top-circle"></div>
+      <div class="bottom-right"></div>
+      <div class="bottom-left"></div>
+      <div class="nav"><h2>FUTMX Pre-Exam</h2></div>
+      <div class="content">
+        <h3>Instructions</h3>
+        <p>
+          The test takes 10mins for 20 questions. <br />
+          To save your result kindly Screenshot it after you finish the test.
+        </p>
+        <br />
+        <div id="user-details">
+          <p><span id="user-name"></span> <span id="dept"></span></p>
+        </div>
+        <p style="color: red" id="error-message"></p>
+        <input type="text" id="username" placeholder="Enter your name" />
+        <br />
+        <br />
+        <input
+          type="text"
+          id="department"
+          placeholder="Enter your Department"
+        />
+        <br />
+        <button onclick="startTest('test.html', 'CPT211')">
+          Take CPT211 test
+        </button>
+      </div>
+      <div class="footer">
+        <p>
+          Developed by
+          <a href="http://facebook.com/samfemiayo123">Samuel Lawal</a> <br />
+          if you have course you would like to add that is not here
+          <a href="tel:+2349038047151">09038047151</a>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    sessionStorage.clear();
+    document.addEventListener("scroll", () => {
+      if (
+        document.documentElement.scrollTop > 20 ||
+        document.body.scrollTop > 20
+      ) {
+        document.getElementsByClassName("nav")[0].style.backgroundColor =
+          "#ddd";
+      } else {
+        document.getElementsByClassName("nav")[0].style.backgroundColor =
+          "rgba(0, 0, 0, 0)";
+      }
+    });
+    if (
+      sessionStorage.getItem("username") != null &&
+      sessionStorage.getItem("department") != null
+    ) {
+      document.getElementById("username").style.display = "none";
+      document.getElementById("department").style.display = "none";
+      document.getElementById("user-name").innerHTML = sessionStorage.getItem(
+        "username"
+      );
+      document.getElementById("dept").innerHTML = sessionStorage.getItem(
+        "department"
+      );
+    }
+
+    function startTest(url, test) {
+      let username = document.getElementById("username");
+      let department = document.getElementById("department");
+      let errorMessage = document.getElementById("error-message");
+      if (
+        sessionStorage.getItem("username") == null &&
+        sessionStorage.getItem("department") == null
+      ) {
+        if (username.value == "" && department.value == "") {
+          errorMessage.innerHTML = "Please Fill in the required fields";
+        } else if (username.value == "" || department.value == "") {
+          errorMessage.innerHTML = "Please Fill in the required fields";
+        } else {
+          sessionStorage.setItem("username", username.value);
+          sessionStorage.setItem("department", department.value);
+          let newHash = Math.floor(Math.random() * 10000000000000);
+          sessionStorage.setItem("hash", newHash);
+          sessionStorage.setItem("test", test);
+          location.replace(url + "#" + newHash);
+        }
+      } else {
+        let newHash = Math.floor(Math.random() * 10000000000000);
+        sessionStorage.setItem("hash", newHash);
+        sessionStorage.setItem("test", test);
+        location.replace(url + "#" + newHash);
+      }
+    }
+  </script>
+</html>

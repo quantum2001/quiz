@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: rgb(61, 3, 116);
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  background-color: #ddd;
+}
+.container-index {
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+.container {
+  min-height: 80vh;
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  color: rgb(61, 3, 116);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  transition: 1s;
+}
+.finish {
+  height: 50px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+}
+
+.content {
+  margin-top: 20px;
+  padding-left: 10px;
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+}
+button {
+  border: none;
+  background-color: rgb(61, 3, 116);
+  margin-left: 10px;
+  margin-top: 10px;
+  color: white;
+  height: 35px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.finish button {
+  background-color: red;
+  margin: 0;
+}
+.top-circle,
+.bottom-right,
+.bottom-left {
+  height: 30vw;
+  width: 30vw;
+  min-width: 200px;
+  min-height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.3;
+  background-color: rgb(61, 3, 116);
+  z-index: -1;
+}
+.top-circle {
+  right: -15vw;
+  top: -15vw;
+  animation: movetopcircle 16s infinite;
+}
+@keyframes movetopcircle {
+  0% {
+    left: -15vw;
+    top: -15vw;
+  }
+  50% {
+    left: -6vw;
+    top: -8vw;
+  }
+  100% {
+    left: -15vw;
+    top: -15vw;
+  }
+}
+.bottom-right {
+  height: 20vw;
+  width: 20vw;
+  right: 13vw;
+  bottom: 5vw;
+  animation: movebr 15s infinite;
+}
+@keyframes movebr {
+  0% {
+    right: 13vw;
+    bottom: 5vw;
+  }
+  50% {
+    right: 2vw;
+    bottom: 10vw;
+  }
+  100% {
+    right: 13vw;
+    bottom: 5vw;
+  }
+}
+.bottom-left {
+  right: 22vw;
+  bottom: -5vw;
+  animation: movebl 17s infinite;
+}
+@keyframes movebl {
+  0% {
+    right: 22vw;
+    bottom: -5vw;
+  }
+  50% {
+    right: 15vw;
+    bottom: -10vw;
+  }
+  100% {
+    right: 22vw;
+    bottom: -5vw;
+  }
+}
+.quiz-container {
+  margin-top: 70px;
+  position: relative;
+}
+.question {
+  position: relative;
+  height: 70vh;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.navigation {
+  display: flex;
+  position: relative;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.navigation button {
+  margin: 0 10px;
+  flex: 33%;
+  min-width: 120px;
+}
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 3px;
+}
+.footer p {
+  text-align: center;
+}
