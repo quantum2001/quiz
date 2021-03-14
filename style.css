@@ -12,11 +12,12 @@ body {
   background-color: #ddd;
 }
 .container-index {
-  height: 100vh;
+  height: 85vh;
+  min-height: 400px;
   position: relative;
-  overflow-y: hidden;
   box-sizing: border-box;
   padding-top: 50px;
+  overflow-y: hidden;
 }
 .container {
   min-height: 80vh;
@@ -29,7 +30,7 @@ body {
   align-items: center;
   padding-left: 20px;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 9;
   position: fixed;
   top: 0;
   transition: 1s;
@@ -162,8 +163,9 @@ button {
   min-width: 120px;
 }
 .footer {
+  margin-top: 20px;
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 3px;
 }
 .footer p {
