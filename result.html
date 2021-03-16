@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "Source Sans Pro", sans-serif;
+        background-color: #ddd;
+      }
+      #details,
+      #test {
+        text-align: center;
+      }
+      #details {
+        margin-top: 70px;
+      }
+      #test {
+        margin-bottom: 30px;
+      }
+      .correction {
+        width: 95%;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 4px auto;
+      }
+      .correct {
+        color: green;
+      }
+      .answer {
+        color: green;
+      }
+      .not-answered {
+        color: goldenrod;
+      }
+      .wrong {
+        color: red;
+      }
+      .nav {
+        height: 50px;
+        width: 100%;
+        color: rgb(61, 3, 116);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        box-sizing: border-box;
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        transition: 1s;
+      }
+      .finish {
+        height: 50px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 10px;
+      }
+      button {
+        border: none;
+        background-color: rgb(61, 3, 116);
+        margin-left: 10px;
+        margin-top: 10px;
+        color: white;
+        height: 35px;
+        padding: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .finish button {
+        background-color: rgb(61, 3, 116);
+        margin: 0;
+      }
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h2>FUTMX Pre-Exam</h2>
+      <div class="finish">
+        <button id="home" onclick="goHome()">Go Home</button>
+      </div>
+    </div>
+    <h2 id="details"></h2>
+    <h3>Your score is <span id="score"></span>/ 20</h3>
+    <p id="test"></p>
+
+    <div id="result-container"></div>
+  </body>
+  <script>
+    let score = 0;
+    document.addEventListener("scroll", () => {
+      if (
+        document.documentElement.scrollTop > 20 ||
+        document.body.scrollTop > 20
+      ) {
+        document.getElementsByClassName("nav")[0].style.backgroundColor =
+          "#fff";
+      } else {
+        document.getElementsByClassName("nav")[0].style.backgroundColor =
+          "rgba(0, 0, 0, 0)";
+      }
+    });
+    let username = sessionStorage.getItem("username");
+    let department = sessionStorage.getItem("department");
+    let test = sessionStorage.getItem("test");
+
+    document.getElementById(
+      "details"
+    ).innerHTML = `${username} (${department})`;
+
+    document.getElementById("test").innerHTML = `${test} Test Summary`;
+    let container = document.getElementById("result-container");
+    let savedQuestions = JSON.parse(sessionStorage.getItem("questions"));
+    let correctAnswers = JSON.parse(sessionStorage.getItem("answers"));
+    let selectedAnswers = JSON.parse(sessionStorage.getItem("selectedAnswers"));
+    for (let i = 0; i < savedQuestions.length; i++) {
+      container.innerHTML +=
+        '<div class="correction"><p>' + savedQuestions[i] + "</p></div>";
+    }
+    let questions = document.getElementsByClassName("correction");
+    for (let i = 0; i < savedQuestions.length; i++) {
+      let selAnswers = eval(`selectedAnswers.q${i + 1}`);
+      let answers = eval(`correctAnswers.q${i + 1}`);
+      if (selAnswers == null || selectedAnswers == "") {
+        questions[i].innerHTML +=
+          '<p class="not-answered">You did not answer this question</p>';
+        questions[i].innerHTML += `<p class="answer">answer: ${answers} </p>`;
+      } else {
+        if (selAnswers == answers) {
+          score++;
+          questions[
+            i
+          ].innerHTML += `<p class="correct">Your answer is correct: ${selAnswers}</p>`;
+          questions[i].innerHTML += `<p class="answer">answer: ${answers} </p>`;
+        } else {
+          questions[
+            i
+          ].innerHTML += `<p class="wrong">Your answer is wrong: ${selAnswers}</p>`;
+          questions[i].innerHTML += `<p class="answer">answer: ${answers} </p>`;
+        }
+      }
+    }
+    document.getElementById("score").innerHTML = score;
+
+    document.getElementsByTagName(
+      "title"
+    )[0].innerHTML = `Your ${sessionStorage.getItem("test")} Result Summary`;
+
+    function goHome() {
+      location.replace("index.html");
+    }
+  </script>
+</html>

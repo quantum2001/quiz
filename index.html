@@ -15,8 +15,10 @@
       <div class="top-circle"></div>
       <div class="bottom-right"></div>
       <div class="bottom-left"></div>
+    </div>
+    <div class="content-body">
       <div class="nav"><h2>FUTMX Pre-Exam</h2></div>
-      <div class="content">
+      <div class="intro">
         <h3>Instructions</h3>
         <p>
           The test takes 10mins for 20 questions. <br />
@@ -40,30 +42,34 @@
           Take CPT211 test
         </button>
       </div>
-    </div>
-    <div class="footer">
-      <p>
-        Developed by
-        <a href="http://facebook.com/samfemiayo123">Samuel Lawal</a> <br />
-        if you have course you would like to add that is not here
-        <a href="tel:+2349038047151">09038047151</a>
-      </p>
+      <div class="footer">
+        <p>
+          Developed by
+          <a href="http://facebook.com/samfemiayo123">Samuel Lawal</a>
+          <br />
+          if you have course you would like to add that is not here
+          <a href="tel:+2349038047151">09038047151</a>
+        </p>
+      </div>
     </div>
   </body>
   <script>
     sessionStorage.clear();
-    document.addEventListener("scroll", () => {
-      if (
-        document.documentElement.scrollTop > 20 ||
-        document.body.scrollTop > 20
-      ) {
-        document.getElementsByClassName("nav")[0].style.backgroundColor =
-          "#ddd";
-      } else {
-        document.getElementsByClassName("nav")[0].style.backgroundColor =
-          "rgba(0, 0, 0, 0)";
-      }
-    });
+    document
+      .getElementsByClassName("content-body")[0]
+      .addEventListener("scroll", () => {
+        if (
+          document.documentElement.getElementsByClassName("content-body")[0]
+            .scrollTop > 20 ||
+          document.body.getElementsByClassName("content-body")[0].scrollTop > 20
+        ) {
+          document.getElementsByClassName("nav")[0].style.backgroundColor =
+            "#ddd";
+        } else {
+          document.getElementsByClassName("nav")[0].style.backgroundColor =
+            "rgba(0, 0, 0, 0)";
+        }
+      });
     if (
       sessionStorage.getItem("username") != null &&
       sessionStorage.getItem("department") != null

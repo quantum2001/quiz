@@ -42,16 +42,16 @@
               <span class="question-sn"></span>. An example of modular
               programming paradigm is
             </p>
-            <input type="radio" id="" value="a" /><span
+            <input type="radio" id="" value="a. Procedure Programming" /><span
               >A. Procedure Programming</span
             ><br />
-            <input type="radio" id="" value="b" /><span
+            <input type="radio" id="" value="b. Object Programming" /><span
               >B. Object Programming</span
             ><br />
-            <input type="radio" id="" value="c" /><span
+            <input type="radio" id="" value="c. Structural Programming" /><span
               >C. Structural Programming</span
             ><br />
-            <input type="radio" id="" value="d" /><span
+            <input type="radio" id="" value="d. High Level Programming" /><span
               >D. High Level Programming</span
             ><br />
           </form>
@@ -62,11 +62,15 @@
               <span class="question-sn"></span>. The only way to access object's
               data is to call it's?
             </p>
-            <input type="radio" id="" value="a" /><span>A. Class</span><br />
-            <input type="radio" id="" value="b" /><span>B. Method</span><br />
-            <input type="radio" id="" value="c" /><span>C. The Object</span
+            <input type="radio" id="" value="a. Class" /><span>A. Class</span
             ><br />
-            <input type="radio" id="" value="d" /><span>D. Member Function</span
+            <input type="radio" id="" value="b. Method" /><span>B. Method</span
+            ><br />
+            <input type="radio" id="" value="c. The Object" /><span
+              >C. The Object</span
+            ><br />
+            <input type="radio" id="" value="d. Member Function" /><span
+              >D. Member Function</span
             ><br />
           </form>
         </div>
@@ -147,12 +151,18 @@
               <span class="question-sn"></span>. In C++, what is the sign of
               charater data type by default ?
             </p>
-            <input type="radio" id="" value="a" /><span>A. Signed</span><br />
-            <input type="radio" id="" value="b" /><span>B. Unsigned</span><br />
-            <input type="radio" id="" value="c" /><span
-              >C. Implementation Dependent</span
+            <input type="radio" id="" value="a. Signed" /><span>A. Signed</span
             ><br />
-            <input type="radio" id="" value="d" /><span>D. None of this</span
+            <input type="radio" id="" value="b. Unsigned" /><span
+              >B. Unsigned</span
+            ><br />
+            <input
+              type="radio"
+              id=""
+              value="c. Implementation Dependent"
+            /><span>C. Implementation Dependent</span><br />
+            <input type="radio" id="" value="d. None of this" /><span
+              >D. None of this</span
             ><br />
           </form>
         </div>
@@ -185,15 +195,17 @@
             <span class="question-sn"></span>. Where does the execution of the
             program starts ?
           </p>
-          <input type="radio" id="" value="a" /><span
+          <input type="radio" id="" value="a. User-defined function" /><span
             >A. User-defined function</span
           ><br />
-          <input type="radio" id="" value="b" /><span>B. Main function</span
+          <input type="radio" id="" value="b. Main function" /><span
+            >B. Main function</span
           ><br />
-          <input type="radio" id="" value="c" /><span
+          <input type="radio" id="" value="c. None of the mentioned" /><span
             >C. None of the mentioned </span
           ><br />
-          <input type="radio" id="" value="d" /><span>D. Void function</span
+          <input type="radio" id="" value="d. Void function" /><span
+            >D. Void function</span
           ><br />
         </form>
       </div>
@@ -243,8 +255,9 @@
             <span class="question-sn"></span>. Is <b>strings</b> a fundamental
             datatype
           </p>
-          <input type="radio" id="" value="a" /><span>A. True</span><br />
-          <input type="radio" id="" value="b" /><span>B. False</span><br />
+          <input type="radio" id="" value="a. True" /><span>A. True</span><br />
+          <input type="radio" id="" value="b. False" /><span>B. False</span
+          ><br />
         </form>
       </div>
 
@@ -264,5 +277,17 @@
       </div>
     </div>
   </body>
+
   <script src="script.js"></script>
+  <script>
+    let totalQuestions = [];
+
+    for (let i = 0; i < questions.length; i++) {
+      let quest = questions[i].querySelector("p").innerHTML;
+      totalQuestions.push(quest);
+    }
+
+    sessionStorage.setItem("questions", JSON.stringify(totalQuestions));
+    console.log(totalQuestions);
+  </script>
 </html>

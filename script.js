@@ -30,24 +30,24 @@ let questions = document.getElementsByClassName("question");
 
 let CPT211answers = {
   q1: "public",
-  q2: "c",
-  q3: "d",
+  q2: "c. structural programming",
+  q3: "d. member function",
   q4: "1 byte",
   q5: "object oriented analysis and design",
   q6: "void",
   q7: "class",
-  q8: "int main()",
+  q8: "main",
   q9: "bjarne stroustrup",
   q10: "20",
-  q11: "c",
+  q11: "c. implementation dependent",
   q12: "12",
   q13: "primitive datatype",
-  q14: "b",
+  q14: "b. main function",
   q15: "inheritance",
   q16: "4 bytes",
   q17: "dot operator",
   q18: "user defined",
-  q19: "b",
+  q19: "b. false",
   q20: "255",
 };
 
@@ -58,6 +58,7 @@ if (
   sessionStorage.setItem("mins", "10");
   sessionStorage.setItem("secs", "0");
 }
+
 let scores = 0;
 let mins = parseInt(sessionStorage.getItem("mins"));
 let secs = parseInt(sessionStorage.getItem("secs"));
@@ -204,20 +205,25 @@ function calculateScores(test) {
       }
     }
   }
-  let username = sessionStorage.getItem("username");
-  let department = sessionStorage.getItem("department");
-  if (scores < questions.length / 2) {
-    alert(
-      `${username} (${department}) your score is ${scores} : Below Average, Pratice More `
-    );
-  } else if (scores > questions.length * 0.7) {
-    alert(
-      `${username} (${department}) your score is ${scores} : Excellent Result`
-    );
-  } else {
-    alert(`${username} (${department}) your score is ${scores} : Good`);
-  }
+  sessionStorage.setItem("answers", JSON.stringify(eval(test + "answers")));
+  sessionStorage.setItem(
+    "selectedAnswers",
+    JSON.stringify(selectedAnswers.prototype)
+  );
+  // let username = sessionStorage.getItem("username");
+  // let department = sessionStorage.getItem("department");
+  // if (scores < questions.length / 2) {
+  //   alert(
+  //     `${username} (${department}) your score is ${scores} : Below Average, Pratice More `
+  //   );
+  // } else if (scores > questions.length * 0.7) {
+  //   alert(
+  //     `${username} (${department}) your score is ${scores} : Excellent Result`
+  //   );
+  // } else {
+  //   alert(`${username} (${department}) your score is ${scores} : Good`);
+  // }
 
-  location.replace("index.html");
+  location.replace("result.html");
 }
 //Developed and created by Samuel
