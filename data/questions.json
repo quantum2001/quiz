@@ -1,0 +1,271 @@
+{
+  "CPT211": {
+    "questions": [
+      {
+        "question": "An access specifier that is made available to all member functions is",
+        "type": "german",
+        "options": [],
+        "answer": "public"
+      },
+      {
+        "question": " An example of modular programming paradigm is",
+        "type": "option",
+        "options": [
+          "procedure programming",
+          "object programming",
+          "structural programming",
+          "high level programming"
+        ],
+        "answer": "structural programming"
+      },
+      {
+        "question": "The only way to access object's data is to call it's?",
+        "type": "option",
+        "options": ["class", "method", "the object", "member function"],
+        "answer": "member function"
+      },
+      {
+        "question": "What is the size of (bool) _____ byte(s)?",
+        "type": "german",
+        "options": [],
+        "answer": "1"
+      },
+      {
+        "question": "What is the full meaning of OOAD ____?",
+        "type": "german",
+        "options": [],
+        "answer": "object oriented analysis and design"
+      },
+      {
+        "question": "Default datatype of C++ is ___?",
+        "type": "german",
+        "options": [],
+        "answer": "void"
+      },
+      {
+        "question": "The keyword that preceed a className is ____?",
+        "type": "german",
+        "options": [],
+        "answer": "class"
+      },
+      {
+        "question": "Default Method of C++ is ___?",
+        "type": "german",
+        "options": [],
+        "answer": "main"
+      },
+      {
+        "question": "Who developed C++",
+        "type": "german",
+        "options": [],
+        "answer": "bjarne stroustrup"
+      },
+      {
+        "question": "What will be the output of this Program ?",
+        "type": "code",
+        "options": [],
+        "answer": "20",
+        "code": " #include &lt;iostream&gt;<br /> using namespace std; <br /> int x = 4, y = 9; <br />      int z; <br /> int main() { <br /> z = (x++) + (--y) + y; <br />cout &lt;&lt; z; <br />}"
+      },
+      {
+        "question": " In C++, what is the sign of charater data type by default ?",
+        "type": "option",
+        "options": [
+          "signed",
+          "unsigned",
+          "implementation dependent",
+          "none of this"
+        ],
+        "answer": "implementation dependent"
+      },
+      {
+        "question": "What will be the output of this Program ? ",
+        "type": "code",
+        "options": [],
+        "answer": "12",
+        "code": "int result = 13 - 2 * 8 / 4 % 3;"
+      },
+      {
+        "question": "The datatype known to c++ compiler are called ____?",
+        "type": "german",
+        "options": [],
+        "answer": "primitive datatype"
+      },
+      {
+        "question": "Where does the execution of the program starts ?",
+        "type": "option",
+        "options": [
+          "User-defined function",
+          "Main function",
+          "None of the mentioned",
+          "Void function"
+        ],
+        "answer": "main function"
+      },
+      {
+        "question": "A class relate with other class through ___ ?",
+        "type": "german",
+        "options": [],
+        "answer": "inheritance"
+      },
+      {
+        "question": "What is the size of float ___byte(s)?",
+        "type": "german",
+        "options": [],
+        "answer": "4"
+      },
+      {
+        "question": " In C++ objects we can access data members and member functions by using ____?",
+        "type": "german",
+        "options": [],
+        "answer": "dot operator"
+      },
+      {
+        "question": "Default data type of class is_____ ?",
+        "type": "german",
+        "options": [],
+        "answer": "user defined"
+      },
+      {
+        "question": "Is <b>strings</b> a fundamental datatype",
+        "type": "option",
+        "options": ["false", "true"],
+        "answer": "false"
+      },
+      {
+        "question": "What is the upper limit of unsigned char ___ ?",
+        "type": "german",
+        "options": [],
+        "answer": "255"
+      }
+    ],
+    "numberOfQuestionsToBeAnswered": 20,
+    "timeInMins": "10"
+  },
+  "PHY215": {
+    "questions": [
+      {
+        "question": "what is light",
+        "type": "german",
+        "options": [],
+        "answer": "light"
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "type": "",
+        "options": [],
+        "answer": ""
+      }
+    ],
+    "numberOfQuestionsToBeAnswered": 10,
+    "timeInMins": "5"
+  }
+}

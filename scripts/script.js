@@ -1,10 +1,59 @@
+let fetchedQuestions = JSON.parse(sessionStorage.getItem("questionstesting"));
+
+for (let i = 0; i < fetchedQuestions.length; i++) {
+  if (
+    fetchedQuestions[i].question != null ||
+    fetchedQuestions[i].question != ""
+  ) {
+    document.getElementById(
+      "question-list"
+    ).innerHTML += `<div class="question">
+    <form>
+      <p>
+        <span class="question-sn"></span>. ${fetchedQuestions[i].question}
+      </p>
+
+    </form>
+  </div>`;
+
+    if (fetchedQuestions[i].type == "option") {
+      for (k = 0; k < fetchedQuestions[i].options.length; k++) {
+        document
+          .querySelectorAll(".question")
+          [i].querySelector("form").innerHTML += `
+  <input type="radio" id="" value="${fetchedQuestions[i].options[k]}" /><span
+        > ${fetchedQuestions[i].options[k]}</span
+      ><br />
+  `;
+      }
+    } else if (fetchedQuestions[i].type == "german") {
+      document
+        .querySelectorAll(".question")
+        [i].querySelector("form").innerHTML += `<input type="text" /> <br />
+  `;
+    } else if (fetchedQuestions[i].type == "code") {
+      document
+        .querySelectorAll(".question")
+        [i].querySelector(
+          "form p"
+        ).innerHTML += `<br /><code>${fetchedQuestions[i].code}</code>`;
+      document
+        .querySelectorAll(".question")
+        [i].querySelector("form").innerHTML += `<input type="text" /> <br />
+  `;
+    }
+  }
+}
+
 let forms = document.getElementsByTagName("form");
+
 for (let i = 0; i < forms.length; i++) {
   let form = forms[i];
   form.addEventListener("submit", (event) => {
     event.preventDefault();
   });
 }
+
 document.addEventListener("scroll", () => {
   if (document.documentElement.scrollTop > 20 || document.body.scrollTop > 20) {
     document.getElementsByClassName("nav")[0].style.backgroundColor = "#ddd";
@@ -14,42 +63,18 @@ document.addEventListener("scroll", () => {
   }
 });
 
-if (
-  location.hash != "#" + sessionStorage.getItem("hash") ||
-  location.hash == "" ||
-  location.hash == "#"
-) {
-  document.getElementById("quiz-container").style.display = "none";
+let click = sessionStorage.getItem("clicked");
+console.log(typeof click);
+if (click == null || click == "" || click != "1") {
+  document.getElementById("container").style.display = "none";
   alert("Wrong Gateway");
   location.replace("index.html");
 }
+
 let test = sessionStorage.getItem("test");
 document.getElementById("test-title").innerHTML = test;
 
 let questions = document.getElementsByClassName("question");
-
-let CPT211answers = {
-  q1: "public",
-  q2: "c. structural programming",
-  q3: "d. member function",
-  q4: "1 byte",
-  q5: "object oriented analysis and design",
-  q6: "void",
-  q7: "class",
-  q8: "main",
-  q9: "bjarne stroustrup",
-  q10: "20",
-  q11: "c. implementation dependent",
-  q12: "12",
-  q13: "primitive datatype",
-  q14: "b. main function",
-  q15: "inheritance",
-  q16: "4 bytes",
-  q17: "dot operator",
-  q18: "user defined",
-  q19: "b. false",
-  q20: "255",
-};
 
 if (
   sessionStorage.getItem("mins") == null &&
@@ -112,7 +137,6 @@ function countDown() {
   if (mins == 0 && secs == 0) {
     document.getElementById("time").innerHTML = "0" + mins + ":" + "0" + secs;
     let sessionTest = sessionStorage.getItem("test");
-    console.log(sessionTest);
     calculateScores(test);
     clearInterval(interval);
   }
@@ -194,36 +218,21 @@ function answeredQuestions() {
 }
 answeredQuestions();
 function calculateScores(test) {
-  console.log(test);
-
-  for (let i = 1; i <= questions.length; i++) {
-    if (test == "CPT211") {
-      let answer = eval(`${test}answers.q${i}`);
-      let selectedAnswer = eval(`selectedAnswers.prototype.q${i}`);
-      if (answer == selectedAnswer) {
-        scores++;
-      }
+  for (let i = 0; i < questions.length; i++) {
+    console.log(i);
+    let answer = fetchedQuestions[i].answer;
+    let selectedAnswer = eval(`selectedAnswers.prototype.q${i + 1}`);
+    if (answer == selectedAnswer) {
+      scores++;
     }
   }
-  sessionStorage.setItem("answers", JSON.stringify(eval(test + "answers")));
+  // sessionStorage.setItem("answers", JSON.stringify(eval(test + "answers")));
   sessionStorage.setItem(
     "selectedAnswers",
     JSON.stringify(selectedAnswers.prototype)
   );
-  // let username = sessionStorage.getItem("username");
-  // let department = sessionStorage.getItem("department");
-  // if (scores < questions.length / 2) {
-  //   alert(
-  //     `${username} (${department}) your score is ${scores} : Below Average, Pratice More `
-  //   );
-  // } else if (scores > questions.length * 0.7) {
-  //   alert(
-  //     `${username} (${department}) your score is ${scores} : Excellent Result`
-  //   );
-  // } else {
-  //   alert(`${username} (${department}) your score is ${scores} : Good`);
-  // }
-
+  sessionStorage.setItem("clicked", "0");
   location.replace("result.html");
 }
-//Developed and created by Samuel
+//Developed and created by Samuel Lawal Oluwafemi
+// samurai

@@ -38,8 +38,22 @@
           placeholder="Enter your Department"
         />
         <br />
-        <button onclick="startTest('test.html', 'CPT211')">
-          Take CPT211 test
+        <br />
+
+        <input
+          type="search"
+          placeholder="Search Quiz"
+          id="search"
+          onkeyup="searchQuiz(this.value)"
+        /><br />
+
+        <br />
+        <p id="search-error"></p>
+        <button class="test-button" onclick="startTest('test.html', 'CPT211')">
+          CPT211
+        </button>
+        <button class="test-button" onclick="startTest('test.html', 'PHY215')">
+          PHY215
         </button>
       </div>
       <div class="footer">
@@ -53,63 +67,5 @@
       </div>
     </div>
   </body>
-  <script>
-    sessionStorage.clear();
-    document
-      .getElementsByClassName("content-body")[0]
-      .addEventListener("scroll", () => {
-        if (
-          document.documentElement.getElementsByClassName("content-body")[0]
-            .scrollTop > 20 ||
-          document.body.getElementsByClassName("content-body")[0].scrollTop > 20
-        ) {
-          document.getElementsByClassName("nav")[0].style.backgroundColor =
-            "#ddd";
-        } else {
-          document.getElementsByClassName("nav")[0].style.backgroundColor =
-            "rgba(0, 0, 0, 0)";
-        }
-      });
-    if (
-      sessionStorage.getItem("username") != null &&
-      sessionStorage.getItem("department") != null
-    ) {
-      document.getElementById("username").style.display = "none";
-      document.getElementById("department").style.display = "none";
-      document.getElementById("user-name").innerHTML = sessionStorage.getItem(
-        "username"
-      );
-      document.getElementById("dept").innerHTML = sessionStorage.getItem(
-        "department"
-      );
-    }
-
-    function startTest(url, test) {
-      let username = document.getElementById("username");
-      let department = document.getElementById("department");
-      let errorMessage = document.getElementById("error-message");
-      if (
-        sessionStorage.getItem("username") == null &&
-        sessionStorage.getItem("department") == null
-      ) {
-        if (username.value == "" && department.value == "") {
-          errorMessage.innerHTML = "Please Fill in the required fields";
-        } else if (username.value == "" || department.value == "") {
-          errorMessage.innerHTML = "Please Fill in the required fields";
-        } else {
-          sessionStorage.setItem("username", username.value);
-          sessionStorage.setItem("department", department.value);
-          let newHash = Math.floor(Math.random() * 10000000000000);
-          sessionStorage.setItem("hash", newHash);
-          sessionStorage.setItem("test", test);
-          location.replace(url + "#" + newHash);
-        }
-      } else {
-        let newHash = Math.floor(Math.random() * 10000000000000);
-        sessionStorage.setItem("hash", newHash);
-        sessionStorage.setItem("test", test);
-        location.replace(url + "#" + newHash);
-      }
-    }
-  </script>
+  <script src="./scripts/index.js"></script>
 </html>

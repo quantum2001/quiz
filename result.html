@@ -98,7 +98,7 @@
       </div>
     </div>
     <h2 id="details"></h2>
-    <h3>Your score is <span id="score"></span>/ 20</h3>
+    <h3>Your score is <span id="score"></span>/ <span id="total"></span></h3>
     <p id="test"></p>
 
     <div id="result-container"></div>
@@ -128,7 +128,7 @@
     document.getElementById("test").innerHTML = `${test} Test Summary`;
     let container = document.getElementById("result-container");
     let savedQuestions = JSON.parse(sessionStorage.getItem("questions"));
-    let correctAnswers = JSON.parse(sessionStorage.getItem("answers"));
+    let correctAnswers = JSON.parse(sessionStorage.getItem("questionstesting"));
     let selectedAnswers = JSON.parse(sessionStorage.getItem("selectedAnswers"));
     for (let i = 0; i < savedQuestions.length; i++) {
       container.innerHTML +=
@@ -137,7 +137,7 @@
     let questions = document.getElementsByClassName("correction");
     for (let i = 0; i < savedQuestions.length; i++) {
       let selAnswers = eval(`selectedAnswers.q${i + 1}`);
-      let answers = eval(`correctAnswers.q${i + 1}`);
+      let answers = correctAnswers[i].answer;
       if (selAnswers == null || selectedAnswers == "") {
         questions[i].innerHTML +=
           '<p class="not-answered">You did not answer this question</p>';
@@ -158,6 +158,9 @@
       }
     }
     document.getElementById("score").innerHTML = score;
+    document.getElementById("total").innerHTML = sessionStorage.getItem(
+      "totalquestion"
+    );
 
     document.getElementsByTagName(
       "title"
