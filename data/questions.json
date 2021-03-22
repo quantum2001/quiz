@@ -139,133 +139,246 @@
         "answer": "255"
       }
     ],
-    "numberOfQuestionsToBeAnswered": 20,
-    "timeInMins": "10"
+    "numberOfQuestionsToBeAnswered": 5,
+    "timeInMins": "1"
   },
-  "PHY215": {
+  "PHY214": {
     "questions": [
       {
-        "question": "what is light",
+        "question": "Which one of these is false about a themometric liquid ?",
+        "type": "option",
+        "options": [
+          "It must be a good conductor of heat",
+          "It must have a high a specific heat capacity",
+          "it must expand and contrast uniformly and steady",
+          "It must have a high coefficient of expansion"
+        ],
+        "answer": "it must have a high a specific heat capacity"
+      },
+      {
+        "question": "Thermometer that makes use of a given mass of gas where pressure varies with temperature at constant volume is a ___ ?",
+        "type": "option",
+        "options": [
+          "Pressure gas thermometer",
+          "Gas thermometer",
+          "Constant volume gas Thermometer",
+          "Themometric Thermometer"
+        ],
+        "answer": "constant volume gas thermometer"
+      },
+      {
+        "question": "Which one of the following is not a property of a alcohol as a thermometric liquid",
+        "type": "option",
+        "options": [
+          "It boils at 78<sup>o</sup>C",
+          "It solidifies at -116<sup>o</sup>C",
+          "Alcohol wets glass",
+          "Alcohol has high Specific Heat Capacity"
+        ],
+        "answer": "it solidifies at -116<sup>o</sup>c"
+      },
+      {
+        "question": "Which one of the following is not a property of mecury as a thermometric liquid",
+        "type": "option",
+        "options": [
+          "It boils at 357 degree celcius",
+          "It does not wet glass",
+          "It is opaque",
+          "It has high Specific Heat Capacity"
+        ],
+        "answer": "it has high specific heat capacity"
+      },
+      {
+        "question": "Convert 57<sup>o</sup>F to <sup>o</sup>C",
+        "type": "option",
+        "options": [
+          "11.11 <sup>o</sup>C",
+          "25.00 <sup>o</sup>C",
+          "32 <sup>o</sup>C",
+          "-57 <sup>o</sup>C"
+        ],
+        "answer": "11.11 <sup>o</sup>c"
+      },
+      {
+        "question": "A brass measuring scale is exactly 2m long at 15<sup>o</sup>C. Determine its length at 40<sup>o</sup>C (linear expansivity of a metal is 2.0 x 10<sup>-5 o</sup>C<sup>-1</sup>)",
+        "type": "option",
+        "options": ["2.0000945m", "0.00095m", "2.009m", "2.000945m"],
+        "answer": "2.000945m"
+      },
+      {
+        "question": "If the linear expansivity of a metal is 2.0 x 10<sup>-5 o</sup>C<sup>-1</sup>. Calculate the approximate value of its superficial expansivity ? ",
+        "type": "option",
+        "options": [
+          "4.0 x 10<sup>-5 o</sup>C<sup>-1</sup>",
+          "2.0 x 10<sup>-10 o</sup>C<sup>-1</sup>",
+          "4.0 x 10<sup>-10 o</sup>C<sup>-1</sup>",
+          "2.0 x 10<sup>-5 o</sup>C<sup>-1</sup>"
+        ],
+        "answer": "4.0 x 10<sup>-5 o</sup>c<sup>-1</sup>"
+      },
+      {
+        "question": "All these are importance of expansion effect except ?",
+        "type": "option",
+        "options": [
+          "Riverting two metals",
+          "Construction of automatic fire alarms",
+          "Thermostat in order to maintain steady temperature",
+          "Joining two metals"
+        ],
+        "answer": "joining two metals"
+      },
+      {
+        "question": "The study of heat mearsurement is _____ ?",
         "type": "german",
         "options": [],
-        "answer": "light"
+        "answer": "calometry"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "The amount of heat required to raise the temperature of a substance by one Kelvin is ____ ?",
+        "type": "option",
+        "options": [
+          "Specific Heat Capacity",
+          "Heat",
+          "Energy",
+          "Heat Capacity"
+        ],
+        "answer": "heat capacity"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "If the specific heat capacity of a unit of a substance is 430J/Kg<sup>o</sup>C. what is the Heat Capacity of 5kg of the subtance at 20<sup>o</sup>C",
+        "type": "option",
+        "options": [
+          "4.3 x 10<sup>4</sup>J/K",
+          "6.3 x 10<sup>5</sup>J/K",
+          "7.3J/K",
+          "2.15 x 10<sup>3</sup>J/K"
+        ],
+        "answer": "2.15 x 10<sup>3</sup>j/k"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "The heat in joules required to raise the temperature of 1Kg of a substance by 1K/<sup>o</sup>C is ____?",
+        "type": "option",
+        "options": [
+          "Specific Heat Capacity",
+          "Heat",
+          "Specific Heat",
+          "Heat Capacity"
+        ],
+        "answer": "specific heat capacity"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "How much heat is needed to bring 10g of water from 50<sup>o</sup> to boiling point _____ ?",
+        "type": "option",
+        "options": ["4200J", "2100J", "2.1 x 10<sup>6</sup>J", "2.1J"],
+        "answer": "2100j"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "To a 1Kg sample of wood 40KJ of heat is added. Its temperature is found to rise from 20<sup>o</sup>C to 40<sup>o</sup>C. What is the specific heat capacity of the wood__?",
+        "type": "option",
+        "options": [
+          "160J/Kg<sup>o</sup>C",
+          "1670J/Kg<sup>o</sup>C",
+          "800000J/Kg<sup>o</sup>C",
+          "800J/Kg<sup>o</sup>C"
+        ],
+        "answer": "1670j/kg<sup>o</sup>c"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "The resistance of a Platinium wire at 0<sup>o</sup>C is 10.44 ohms and 10.71 ohms at 100<sup>o</sup>C. calculate the temperature when the resistance is 9.61 ohms?",
+        "type": "option",
+        "options": [
+          "-307.4<sup>o</sup>C",
+          "-407.4<sup>o</sup>C",
+          "-9.61<sup>o</sup>C",
+          "-109.61<sup>o</sup>C"
+        ],
+        "answer": "-307.4<sup>o</sup>c"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "A square sheet of 15cm<sup>2</sup> at 0<sup>o</sup>C determine it area at 40<sup>o</sup>C given the coefficient of linear expansivity of steel is (1.1x10<sup>-5 o</sup>C)",
+        "type": "option",
+        "options": [
+          "6.6 x 10 <sup>-5</sup>cm<sup>2</sup>",
+          "15.0132cm<sup>2</sup>",
+          "15.00132cm<sup>2</sup>",
+          "15.12cm<sup>2</sup>"
+        ],
+        "answer": "15.0132cm<sup>2</sup>"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "A density glass bottle contains 44.25g of a liquid at 0<sup>o</sup>C and 42.02g at 50<sup>o</sup>C. calculate the real cubic expansivity ?",
+        "type": "option",
+        "options": [
+          "0.00107 K<sup>-1</sup>",
+          "0.00109 K<sup>-1</sup>",
+          "44.20107 K<sup>-1</sup>",
+          "44.20109 K<sup>-1</sup>"
+        ],
+        "answer": "0.00109 k<sup>-1</sup>"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "A relative density bottle of 50cm<sup>3</sup> is completely filled with a liquid at 30<sup>o</sup>C its then heated to 80<sup>o</sup>C such that 0.75cm<sup>2</sup> of liquid is expelled. Calculate the apparent cubic expansivity of the liquid?",
+        "type": "option",
+        "options": [
+          "0.0000305K<sup>-1</sup>",
+          "0.000305K<sup>-1</sup>",
+          "50.000305K<sup>-1</sup>",
+          "50.000305K<sup>-1</sup>"
+        ],
+        "answer": "0.000305k<sup>-1</sup>"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "A piece of copper 0.1Kg is heated to 100<sup>o</sup>C and then transferred to a well lagged copper can of mass 0.05Kg containing 0.2Kg of water at 10<sup>o</sup>C. Calculate the final temperature of the mixture ?",
+        "type": "option",
+        "options": [
+          "14<sup>o</sup>C",
+          "11<sup>o</sup>C",
+          "28<sup>o</sup>C",
+          "24<sup>o</sup>C"
+        ],
+        "answer": "14<sup>o</sup>c"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "Calculate the power rating of an immersion heater used for 10mins to increase the temperature of 10kg by 15K(shc of water 4200J/KgC)",
+        "type": "option",
+        "options": [
+          "6.3 x 10<sup>6</sup>Watts",
+          "6300Watts",
+          "1050Watts",
+          "1000Watts"
+        ],
+        "answer": "1050watts"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "A heating coil rated at 1000W is used to boil off 0.5Kg of boiling water what is the time taken to boil off the water (L<sub>v</sub> = 2.3 x 10 <sup>6</sup> J/Kg)?",
+        "type": "option",
+        "options": [
+          "1.15 x 10<sup>3</sup>s",
+          "1.15 x 10<sup>6</sup>s",
+          "2s",
+          "1.15 x 10<sup>9</sup>s"
+        ],
+        "answer": "1.15 x 10<sup>3</sup>s"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "What amount of current will pass through 10ohms coil if it takes 21secs to melt a lump of ice of mass 10g at 0<sup>o</sup>C if there are no loss?",
+        "type": "option",
+        "options": ["16 Ampere", "18 Ampere", "2 Ampere", "4 Ampere"],
+        "answer": "4 ampere"
       },
       {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
-      },
-      {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
-      },
-      {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
-      },
-      {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
-      },
-      {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
-      },
-      {
-        "question": "",
-        "type": "",
-        "options": [],
-        "answer": ""
+        "question": "A piece of iron mass 0.2Kg is heated to 64<sup>o</sup>C and gently drop into 0.15kg of water at 16<sup>o</sup>CC. if the temperature of the mixture is 22<sup>o</sup>C what is the specific heat capacity of iron?",
+        "type": "option",
+        "options": [
+          "180J/Kg<sup>o</sup>C",
+          "18J/Kg<sup>o</sup>C",
+          "213J/Kg<sup>o</sup>C",
+          "450J/Kg<sup>o</sup>C"
+        ],
+        "answer": "450j/kg<sup>o</sup>c"
       }
     ],
-    "numberOfQuestionsToBeAnswered": 10,
-    "timeInMins": "5"
+    "numberOfQuestionsToBeAnswered": 20,
+    "timeInMins": "10"
   }
 }
