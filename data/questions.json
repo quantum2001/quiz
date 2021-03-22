@@ -192,12 +192,12 @@
         "question": "Convert 57<sup>o</sup>F to <sup>o</sup>C",
         "type": "option",
         "options": [
-          "11.11 <sup>o</sup>C",
+          "13.89 <sup>o</sup>C",
           "25.00 <sup>o</sup>C",
           "32 <sup>o</sup>C",
           "-57 <sup>o</sup>C"
         ],
-        "answer": "11.11 <sup>o</sup>c"
+        "answer": "13.89 <sup>o</sup>c"
       },
       {
         "question": "A brass measuring scale is exactly 2m long at 15<sup>o</sup>C. Determine its length at 40<sup>o</sup>C (linear expansivity of a metal is 2.0 x 10<sup>-5 o</sup>C<sup>-1</sup>)",
